@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+@import "../../sassStyles/mixins.scss";
+@import "../../sassStyles/pallette.module";
+
+.NavBar {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+	-webkit-box-shadow: 0 4px 6px -6px #222;
+	-moz-box-shadow: 0 4px 6px -6px #222;
+	box-shadow: 0 4px 6px -6px #222;
+	height: 70px;
+	width: 100%;
+	margin-bottom: 2%;
+
+	&__List {
+		@include flex-items;
+		margin: 10px 4vw 0 4vw;
+
+		& > li > a {
+			color: $eerie-black;
+		}
+
+		&__Logo {
+			font-family: "Arvo", serif;
+			text-align: center;
+			font-size: 35px;
+			// padding: 0 30px;
+			// margin: 0 25px;
+			max-width: 60%;
+		}
+
+		&__BtnWrap {
+			// margin: 5px 30px;
+		}
+	}
+}

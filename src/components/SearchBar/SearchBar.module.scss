@@ -1,0 +1,23 @@
+@import "../../sassStyles/mixins.scss";
+
+.SearchBar {
+	width: 250px;
+	@include flex-items;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	padding: 0 10px;
+	height: 40px;
+	// margin: 0 50px;
+
+	&:hover {
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+	}
+
+	&__Input {
+		border: none;
+		outline: none;
+		width: 100%;
+		font-size: 14px;
+		line-height: 25px;
+	}
+}

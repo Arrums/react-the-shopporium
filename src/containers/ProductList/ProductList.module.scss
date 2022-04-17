@@ -1,0 +1,10 @@
+.ProductList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2%;
+	padding: 0 2%;
+
+	> * {
+		flex: 1 1 400px;
+	}
+}
