@@ -8,7 +8,8 @@ const items = [
 			"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
 		isFav: false,
 		quantity: 10,
-		size: ["Small", "Medium", "Large"],
+		size: ["S", "M", "L"],
+		isFeatured: false,
 	},
 	{
 		title: "Mens Cotton Jacket",
@@ -18,7 +19,8 @@ const items = [
 		image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
 		isFav: false,
 		quantity: 10,
-		size: ["Small", "Medium", "Large"],
+		size: ["S", "M", "L"],
+		isFeatured: true,
 	},
 	{
 		title: "Mens Casual Slim Fit",
@@ -28,7 +30,8 @@ const items = [
 		image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
 		isFav: false,
 		quantity: 10,
-		size: ["Small", "Medium", "Large"],
+		size: ["S", "M", "L"],
+		isFeatured: false,
 	},
 	{
 		title: "Women's 3-in-1 Snowboard Jacket",
@@ -38,7 +41,8 @@ const items = [
 		image: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
 		isFav: false,
 		quantity: 10,
-		size: ["Small", "Medium", "Large"],
+		size: ["S", "M", "L"],
+		isFeatured: true,
 	},
 	{
 		title: "Women's Hooded Faux Leather Jacket",
@@ -48,7 +52,8 @@ const items = [
 		image: "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
 		isFav: false,
 		quantity: 10,
-		size: ["Small", "Medium", "Large"],
+		size: ["S", "M", "L"],
+		isFeatured: true,
 	},
 	{
 		title: "Women's Rain Jacket Windbreaker",
@@ -58,7 +63,8 @@ const items = [
 		image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
 		isFav: false,
 		quantity: 10,
-		size: ["Small", "Medium", "Large"],
+		size: ["S", "M", "L"],
+		isFeatured: false,
 	},
 	{
 		title: "Women's Short Sleeve Boat Neck",
@@ -68,7 +74,8 @@ const items = [
 		image: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
 		isFav: false,
 		quantity: 10,
-		size: ["Small", "Medium", "Large"],
+		size: ["S", "M", "L"],
+		isFeatured: false,
 	},
 	{
 		title: "Women's Short Sleeve Moisture",
@@ -78,7 +85,8 @@ const items = [
 		image: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
 		isFav: false,
 		quantity: 10,
-		size: ["Small", "Medium", "Large"],
+		size: ["S", "M", "L"],
+		isFeatured: false,
 	},
 	{
 		title: "Womens T-Shirt Cotton Short",
@@ -88,7 +96,8 @@ const items = [
 		image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
 		isFav: false,
 		quantity: 10,
-		size: ["Small", "Medium", "Large"],
+		size: ["S", "M", "L"],
+		isFeatured: false,
 	},
 ];
 

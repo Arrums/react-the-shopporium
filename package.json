@@ -10,7 +10,6 @@
     "firebase": "^9.6.11",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-material-ui-carousel": "^3.3.3",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0"
   },

@@ -1,12 +1,16 @@
 import { SearchContext } from "../../context/SearchContext";
 import { useState, useContext, useEffect } from "react";
-import { ProductsContext } from "../../context/ProductsContext";
 import { updateProduct, getItems } from "../../services/server";
-import ProductCard from "../../components/ProductCard";
+import ProductCard from "../../components/ProductCard/ProductCard";
 import styles from "./ProductList.module.scss";
 
 const ProductList = ({ onAddToCart }) => {
-	const { products, setProducts } = useContext(ProductsContext);
+	const [products, setProducts] = useState([]);
+
+	const getProducts = async () => {
+		const data = await getItems();
+		setProducts(data);
+	};
 
 	const { search } = useContext(SearchContext);
 
@@ -15,14 +19,14 @@ const ProductList = ({ onAddToCart }) => {
 		return product.title.includes(search);
 	});
 
-	const addFav = async (selected) => {
-		setProducts(
-			products.map((product) => {
-				return product.id !== selected.id
-					? product
-					: { ...product, isFav: !product.isFav };
-			}),
-		);
+	useEffect(() => {
+		getProducts();
+	}, []);
+
+	const addFav = async (updatedRecord) => {
+		const { id, ...record } = updatedRecord;
+		await updateProduct(id, record);
+		getItems();
 	};
 
 	return (

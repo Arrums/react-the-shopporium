@@ -1,3 +1,5 @@
+@import "../../sassStyles/mixins.scss";
+
 .Card {
 	max-width: 100%;
 	height: 450px;
@@ -23,14 +25,18 @@
 
 	&__Content {
 		min-width: 400px;
-		display: flex;
-		justify-content: space-between;
 		padding: 0 10px;
+		@include flex-items;
 	}
 
 	&__Action {
-		display: flex;
-		justify-content: flex-end;
+		@include flex-items;
 		padding: 25px 0;
+		min-width: 90%;
+		margin: 0 auto;
+
+		> div > label {
+			padding: 0 10px;
+		}
 	}
 }
