@@ -1,22 +1,13 @@
 import { useState, useEffect } from "react";
 import { getItems } from "../../services/server";
 import Carousel from "../../components/Carousel";
+import ProductList from "../ProductList";
 
-const Home = () => {
-	const [products, setProducts] = useState([]);
-
-	const getProducts = async () => {
-		const data = await getItems();
-		setProducts(data);
-	};
-
-	useEffect(() => {
-		getProducts();
-	}, []);
-
+const Home = ({ products }) => {
 	return (
 		<>
 			<Carousel products={products} />
+			<ProductList />
 		</>
 	);
 };

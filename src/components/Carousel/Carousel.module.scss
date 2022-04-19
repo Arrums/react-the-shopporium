@@ -1,22 +1,24 @@
 @import "../../sassStyles/mixins.scss";
 
-.slider {
-	margin-top: 5vh;
-	height: 60vh;
+.Slider {
+	margin: 5%;
+	height: 55vh;
 	@include flex-items($just-cont: center);
 
-	> img {
-		border-radius: 10px;
-		width: auto;
-		max-width: 500px;
-		max-height: 400px;
-		height: auto;
+	&__Slide {
+		transition-duration: 1.5s ease;
+
+		&__image {
+			margin: 0 auto;
+			padding: 0 300px;
+			width: auto;
+			max-width: 500px;
+			max-height: 450px;
+			height: auto;
+		}
 	}
 
 	&__left {
-		// position: absolute;
-		// top: 50%;
-		// left: 32px;
 		font-size: 55px;
 		cursor: pointer;
 		z-index: 5;
@@ -24,23 +26,9 @@
 	}
 
 	&__right {
-		// position: absolute;
-		// top: 50%;
-		// right: 32px;
 		font-size: 55px;
 		cursor: pointer;
 		z-index: 5;
 		user-select: none;
 	}
-}
-
-.slide {
-	opacity: 0;
-	transition-duration: 1s ease;
-}
-
-.slide-active {
-	opacity: 1;
-	transition-duration: 1s;
-	transform: scale(1.1);
 }

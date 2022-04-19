@@ -1,4 +1,11 @@
-# React Project: E-commerce Website
+# React Project: The Shoppporium
+
+Create an e-commerce website in React JS and using Firestore as a database.
+
+## Goals
+
+Implementing React and Remote Database topics that I have learned such as
+routing, hooks, context, and Firestore.
 
 ## Requirements
 
@@ -34,7 +41,23 @@ Bonus:
   stock.
 - You will have to check the current cart and the product quantity
 - Cart page should have the following:
+
   - List of products in cart
   - ability to change quantity of products in cart
   - ability to remove items from cart
   - Make sure you site is scope to one category of products
+
+  ### Tech Stack
+
+- [x] HTML
+- [x] SCSS (Some styling from Material UI)
+- [x] Javascript
+- [x] React
+- [x] Firestore
+- [x] Git and Github
+
+### Issue to be addressed
+
+- [ ] Individual product page
+- [ ] Create cart page with list of products
+- [ ] Add quantity when adding products to cart

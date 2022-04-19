@@ -5,36 +5,42 @@ import styles from "./Carousel.module.scss";
 
 const Carousel = ({ products }) => {
 	const [current, setCurrent] = useState(0);
-	const featuredProducts = products.filter((product) => product.isFeatured);
+	const [featuredProducts, setFeaturedProducts] = useState([]);
 
-	const length = featuredProducts.length;
+	useEffect(() => {
+		setFeaturedProducts(products.filter((product) => product.isFeatured));
+	}, [products]);
 
 	const nextSlide = () => {
-		setCurrent(current === length - 1 ? 0 : current + 1);
+		setCurrent(current === 2 ? 0 : current + 1);
 	};
 
 	const prevSlide = () => {
-		setCurrent(current === 0 ? length - 1 : current - 1);
+		setCurrent(current === 0 ? 2 : current - 1);
 	};
 
-	return (
-		<section className={styles.slider}>
-			<ArrowCircleLeftIcon
-				className={styles.slider__left}
-				onClick={prevSlide}
-			/>
-			{featuredProducts.map((item, i) => {
-				return (
-					<div className={i === current ? "slide-active" : "slide"} key={i}>
-						{i === current && <img src={item.image} alt="Featured product" />}
-					</div>
-				);
-			})}
-			<ArrowCircleRightIcon
-				className={styles.slider__right}
-				onClick={nextSlide}
-			/>
-		</section>
-	);
+	if (featuredProducts.length > 0) {
+		return (
+			<section className={styles.Slider}>
+				<ArrowCircleLeftIcon
+					className={styles.Slider__left}
+					onClick={prevSlide}
+				/>
+
+				<div className={styles.Slider__Slide}>
+					<img
+						className={styles.Slider__Slide__image}
+						src={featuredProducts[current]?.image}
+						alt="Featured product"
+					/>
+				</div>
+
+				<ArrowCircleRightIcon
+					className={styles.Slider__right}
+					onClick={nextSlide}
+				/>
+			</section>
+		);
+	}
 };
 export default Carousel;

@@ -3,6 +3,7 @@ import { Typography, IconButton } from "@mui/material";
 import { AddShoppingCart } from "@mui/icons-material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import { Link } from "react-router-dom";
 import styles from "./ProductCard.module.scss";
 
 const ProductCard = ({ product, addFav, onAddToCart }) => {
@@ -22,9 +23,9 @@ const ProductCard = ({ product, addFav, onAddToCart }) => {
 		setFav(!product.isFav);
 	};
 
-	const handleAddCart = () => {
-		onAddToCart(product);
-	};
+	// const handleAddCart = () => {
+	// 	onAddToCart(product);
+	// };
 
 	const sizeSelect = product.size.map((size, index) => {
 		return (
@@ -38,13 +39,17 @@ const ProductCard = ({ product, addFav, onAddToCart }) => {
 		addFav({ ...product, isFav: fav });
 	}, [fav]);
 
+	const path = `/Products/${product.id}`;
+
 	return (
 		<section className={styles.Card}>
-			<img
-				className={styles.Card__Media}
-				src={product.image}
-				alt={product.title}
-			/>
+			<Link to={path}>
+				<img
+					className={styles.Card__Media}
+					src={product.image}
+					alt={product.title}
+				/>
+			</Link>
 			<div className={styles.Card__Content}>
 				<Typography fontSize={18}>{product.title}</Typography>
 				<Typography fontSize={18}>${product.price}</Typography>
