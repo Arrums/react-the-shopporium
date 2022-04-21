@@ -2,10 +2,17 @@
 
 Create an e-commerce website in React JS and using Firestore as a database.
 
+![Landing-Page](https://user-images.githubusercontent.com/100544967/164431205-bf6fe968-f697-4752-89cf-08bcd0b8a0f6.PNG)
+
 ## Goals
 
 Implementing React and Remote Database topics that I have learned such as
 routing, hooks, context, and Firestore.
+
+## Inspiration
+
+![inspiration](https://user-images.githubusercontent.com/100544967/164431600-24f4c2af-d2ed-4480-99ca-824f796fb56e.PNG)
+[Brewwlab](https://www.thehorse.com.au/)
 
 ## Requirements
 
@@ -47,7 +54,7 @@ Bonus:
   - ability to remove items from cart
   - Make sure you site is scope to one category of products
 
-  ### Tech Stack
+### Tech Stack
 
 - [x] HTML
 - [x] SCSS (Some styling from Material UI)
@@ -58,6 +65,6 @@ Bonus:
 
 ### Issue to be addressed
 
-- [ ] Individual product page
+- [x] Individual product page
 - [ ] Create cart page with list of products
 - [ ] Add quantity when adding products to cart

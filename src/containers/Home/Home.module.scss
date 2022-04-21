@@ -1,0 +1,30 @@
+@import "../../sassStyles/mixins.scss";
+
+.ProductGrid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 0 5vw;
+	gap: 30px;
+
+	&__Items {
+		max-width: 100%;
+		height: 350px;
+		max-height: 100%;
+		box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+		border-radius: 10px;
+		@include flex-items($flx-dir: column, $just-cont: center);
+		margin-bottom: 30px;
+
+		&:hover {
+			transform: scale(0.9);
+		}
+	}
+}
+
+img {
+	width: auto;
+	max-width: 250px;
+	height: auto;
+	max-height: 250px;
+	margin-bottom: 30px;
+}

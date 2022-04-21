@@ -1,13 +1,26 @@
-import { useState, useEffect } from "react";
-import { getItems } from "../../services/server";
 import Carousel from "../../components/Carousel";
-import ProductList from "../ProductList";
+import styles from "./Home.module.scss";
+import { Link } from "react-router-dom";
 
 const Home = ({ products }) => {
 	return (
 		<>
 			<Carousel products={products} />
-			<ProductList />
+			<div className={styles.ProductGrid}>
+				{products.map((product) => {
+					return (
+						<Link to="/Products">
+							<div
+								className={styles.ProductGrid__Items}
+								alt="clothes"
+								key={product.id}>
+								<img src={product.image} />
+								<p>{product.title}</p>
+							</div>
+						</Link>
+					);
+				})}
+			</div>
 		</>
 	);
 };

@@ -1,13 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StyledEngineProvider } from "@mui/material/styles";
 import { useState, useEffect } from "react";
-import { getItems } from "./services/server";
+import { getItems, updateProduct } from "./services/server";
 import "./App.module.scss";
 import Home from "./containers/Home";
 import ProductsPage from "./containers/ProductsPage/ProductsPage";
 import Header from "./containers/Header";
 import ProductList from "./containers/ProductList";
+import Footer from "./components/Footer/Footer";
 import SearchProvider from "./context/SearchContext";
+import FavPage from "./containers/FavPage/FavPage";
 
 const App = () => {
 	// const [cart, setCart] = useState([]);
@@ -37,6 +39,7 @@ const App = () => {
 	useEffect(() => {
 		getProducts();
 	}, []);
+
 	return (
 		<>
 			<BrowserRouter>
@@ -53,7 +56,13 @@ const App = () => {
 								path="Products/:productId"
 								element={<ProductsPage products={products} />}
 							/>
+
+							<Route
+								path="favourites"
+								element={<FavPage products={products} />}
+							/>
 						</Routes>
+						<Footer />
 					</StyledEngineProvider>
 				</SearchProvider>
 			</BrowserRouter>

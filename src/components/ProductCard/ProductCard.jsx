@@ -6,7 +6,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import { Link } from "react-router-dom";
 import styles from "./ProductCard.module.scss";
 
-const ProductCard = ({ product, addFav, onAddToCart }) => {
+const ProductCard = ({ product, addFav }) => {
 	const [qty, setQty] = useState(1);
 	const [size, setSize] = useState("small");
 	const [fav, setFav] = useState(product.isFav);
@@ -22,10 +22,6 @@ const ProductCard = ({ product, addFav, onAddToCart }) => {
 	const handleFavorite = () => {
 		setFav(!product.isFav);
 	};
-
-	// const handleAddCart = () => {
-	// 	onAddToCart(product);
-	// };
 
 	const sizeSelect = product.size.map((size, index) => {
 		return (
