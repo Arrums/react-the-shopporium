@@ -17,7 +17,7 @@ const NavBar = () => {
 					</li>
 
 					<li>
-						<a href="#">Favorites</a>
+						<Link to="/Favourites">Favorites</Link>
 					</li>
 					<h1 className={styles.NavBar__List__Logo}>The Shopporium</h1>
 					<SearchBar />

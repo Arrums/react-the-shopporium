@@ -1,0 +1,14 @@
+@import "../../sassStyles/pallette.scss";
+
+.Footer {
+	background-color: $isabelline;
+	margin-top: 2%;
+	padding: 20px;
+
+	> p {
+		color: $eerie-black;
+		text-align: center;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 300;
+	}
+}
