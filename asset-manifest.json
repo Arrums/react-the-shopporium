@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-the-shopporium/static/css/main.b0ec68da.css",
+    "main.js": "/react-the-shopporium/static/js/main.39ef7589.js",
+    "index.html": "/react-the-shopporium/index.html",
+    "main.b0ec68da.css.map": "/react-the-shopporium/static/css/main.b0ec68da.css.map",
+    "main.39ef7589.js.map": "/react-the-shopporium/static/js/main.39ef7589.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0ec68da.css",
+    "static/js/main.39ef7589.js"
+  ]
+}
