@@ -3,7 +3,7 @@
 Create an e-commerce website in React JS and using Firestore as a database.
 
 ![Landing-Page](https://user-images.githubusercontent.com/100544967/164431205-bf6fe968-f697-4752-89cf-08bcd0b8a0f6.PNG)
-[Live Project]https://arrums.github.io/react-the-shopporium/
+[Live Project](https://arrums.github.io/react-the-shopporium/)
 
 ## Goals
 
@@ -25,8 +25,7 @@ MVP:
   - Home Page
   - Grid of products
   - Carousel of featured products
-  - Product Page (with id parameter) Similar to a product page on another site,
-    allows you to add to cart and select product variants
+  - Product Page (with id parameter) Similar to a product page on another site, allows you to add to cart and select product variants
 
 All products should be stored in Firestore, you should store the following
 information:
